@@ -1,11 +1,7 @@
 import React from 'react';
 
-function App() {
-  return (
-    <div>
-      <h1>Showkokhon?</h1>
-    </div>
-  );
-}
+import AppRouter from './router/AppRouter';
+
+const App = () => <AppRouter />
 
 export default App;
