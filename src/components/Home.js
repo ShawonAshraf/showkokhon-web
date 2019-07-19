@@ -22,8 +22,12 @@ const Home = () => {
   return (
     <div>
       <h1>Showkokhon</h1>
-      {nowPlaying.length === 0 ? <p>No movies are playing right now!</p> : <ul>
-        {nowPlaying.map(movie => <li key={movie}>{movie}</li>)}
+      {nowPlaying.length === 0 ? <p>Loading!</p> : <ul>
+        {
+          nowPlaying.map(movie => <li key={movie}>
+            <a href={`schedule/${movie}`}>{movie}</a>
+          </li>)
+        }
       </ul>}
     </div>
   );
