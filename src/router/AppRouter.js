@@ -1,17 +1,12 @@
 import React from 'react';
 import { Router } from "@reach/router"
 
-// import components
-import Home from '../components/Home';
-import Schedule from '../components/Schedule';
-
-const AppRouter = () => {
+const AppRouter = (props) => {
   return (
     <Router>
-      <Home path={ "/" } />
-      <Schedule path={ "schedule/:movieName" } />
+      { props.children }
     </Router>
-  )
+  );
 };
 
 export default AppRouter;
