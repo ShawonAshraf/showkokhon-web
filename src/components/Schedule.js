@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-import ScheduleDetail from './ScheduleDetail';
+import ScheduleDetails from './ScheduleDetails';
 
 const Schedule = (props) => {
   // state hook
@@ -22,9 +22,11 @@ const Schedule = (props) => {
 
   return(
     <div>
-      <h1>Schedule for {props.movieName}</h1>
+      <h1>Showing Schedule for</h1>
+      <h2>{props.movieName}</h2>
+
       {
-        state.length === 0 ? <p>Loading!</p> : state.map(movie => <ScheduleDetail key={movie._id} movie={movie} />)
+        state.length === 0 ? <p>Loading!</p> : state.map(movie => <ScheduleDetails key={movie._id} movie={movie} />)
       }
     </div>
   );

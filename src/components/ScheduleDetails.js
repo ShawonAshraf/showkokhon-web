@@ -1,6 +1,8 @@
 import React from 'react';
 
-const ScheduleDetail = (props) => {
+import PlayingAtCard from './PlayingAtCard';
+
+const ScheduleDetails = (props) => {
   const { movie } = props;
   const { schedule } = movie;
 
@@ -10,9 +12,7 @@ const ScheduleDetail = (props) => {
         schedule.map((sc, index) => <div key={index}>
           <h3>{sc.date}</h3>
           {
-            <ul>
-              { sc.playingAt.map(pl => pl.showTimes.map((showTime, index) => <li key={index}>{showTime}</li>))}
-            </ul>
+            sc.playingAt.map((pl, index) => <PlayingAtCard key={index} playingAt={pl}/>)
           }
         </div>)
       }
@@ -20,4 +20,4 @@ const ScheduleDetail = (props) => {
   );
 };
 
-export default ScheduleDetail;
+export default ScheduleDetails;
