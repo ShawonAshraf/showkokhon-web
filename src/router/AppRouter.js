@@ -9,7 +9,7 @@ const AppRouter = () => {
   return (
     <Router>
       <Home path={ "/" } />
-      <Schedule path={ "/schedule" } />
+      <Schedule path={ "schedule/:movieName" } />
     </Router>
   )
 };

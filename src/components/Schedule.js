@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Schedule = () => {
+const Schedule = (props) => {
   return(
     <div>
-      <h1>Schedule</h1>
+      <h1>Schedule for {props.movieName}</h1>
     </div>
   );
 };
