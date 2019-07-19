@@ -5,7 +5,7 @@ import ScheduleDetails from './ScheduleDetails';
 
 const Schedule = (props) => {
   // state hook
-  const [state, setSchedule] = useState([]);
+  const [state, setState] = useState([]);
 
   // effect hook
   useEffect(() => {
@@ -14,7 +14,7 @@ const Schedule = (props) => {
       const response = await axios.get(url);
 
       // set state
-      setSchedule(response.data);
+      setState(response.data);
     };
 
     fetchSchedule(props.movieName);
@@ -23,6 +23,7 @@ const Schedule = (props) => {
   return(
     <div>
       <h1>Showing Schedule for</h1>
+      <h2>{props.movieName}</h2>
       {
         state.length === 0 ? <p>Loading!</p> : state.map(movie => <ScheduleDetails key={movie._id} movie={movie} />)
       }

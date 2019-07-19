@@ -8,12 +8,14 @@ const ScheduleDetails = (props) => {
 
   return (
     <div>
-      <h2>{movie.name} on {movie.mediaType}</h2>
       {
         schedule.map((sc, index) => <div key={index}>
           <h3>{sc.date}</h3>
           {
-            sc.playingAt.map((pl, index) => <PlayingAtCard key={index} playingAt={pl}/>)
+            sc.playingAt.map((pl, index) => <PlayingAtCard
+              key={index}
+              playingAt={pl}
+              mediaType={movie.mediaType}/>)
           }
         </div>)
       }
