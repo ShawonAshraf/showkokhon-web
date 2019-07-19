@@ -8,6 +8,7 @@ const ScheduleDetails = (props) => {
 
   return (
     <div>
+      <h2>{movie.name} on {movie.mediaType}</h2>
       {
         schedule.map((sc, index) => <div key={index}>
           <h3>{sc.date}</h3>

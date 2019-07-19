@@ -23,8 +23,6 @@ const Schedule = (props) => {
   return(
     <div>
       <h1>Showing Schedule for</h1>
-      <h2>{props.movieName}</h2>
-
       {
         state.length === 0 ? <p>Loading!</p> : state.map(movie => <ScheduleDetails key={movie._id} movie={movie} />)
       }
