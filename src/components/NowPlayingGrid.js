@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const NowPLayingGrid = (props) => {
+const NowPlayingGrid = (props) => {
   const { nowPlaying } = props;
   const classes = useStyles();
 
@@ -35,4 +35,4 @@ const NowPLayingGrid = (props) => {
   );
 };
 
-export default NowPLayingGrid;
+export default NowPlayingGrid;
