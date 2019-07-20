@@ -1,11 +1,20 @@
 import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 
 import NowPlaying from './NowPlaying';
 
+const useStyles = makeStyles(theme => ({
+  root: {
+    flexGrow: 1,
+  }
+}));
+
 const Home = () => {
+  const classes = useStyles();
+
   return (
-    <div>
-      <h1>Home</h1>
+    <div className={classes.root}>
+      <h2>Home</h2>
       <NowPlaying />
     </div>
   );
