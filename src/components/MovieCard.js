@@ -35,6 +35,7 @@ const MovieCard = (props) => {
           height="140"
           image={imageUrl}
           title={name}
+          onClick={() => window.location.href= `schedule/${name}` }
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
@@ -43,15 +44,14 @@ const MovieCard = (props) => {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <a href={`schedule/${name}`}>
-          <Button
-            size="small"
-            color="primary"
-            path={`schedule/${name}`}
-          >
-            Schedule
-          </Button>
-        </a>
+        <Button
+          size="small"
+          color="primary"
+          path={`schedule/${name}`}
+          onClick={() => window.location.href= `schedule/${name}` }
+        >
+          Schedule
+        </Button>
       </CardActions>
     </Card>
   );
