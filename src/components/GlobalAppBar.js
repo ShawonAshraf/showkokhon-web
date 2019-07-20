@@ -14,6 +14,12 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     flexGrow: 1,
+    fontFamily: [
+      '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      'sans-serif'
+    ].join(''),
+    fontWeight: 'bold',
   },
   menuButton: {
     marginLeft: -12,
