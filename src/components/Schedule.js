@@ -22,11 +22,15 @@ const Schedule = (props) => {
 
   return(
     <div>
-      <h2>Showing Schedule for</h2>
-      <h2>{props.movieName}</h2>
-      {
-        state.length === 0 ? <p>Loading!</p> : state.map(movie => <ScheduleDetails key={movie._id} movie={movie} />)
-      }
+      <h1 className={'movie-name-header'} align='center'>{props.movieName}</h1>
+      <div className={'schedule-details'}>
+        {
+          state.length === 0 ? <p>Loading!</p> : state.map(movie => <ScheduleDetails
+            key={movie._id}
+            movie={movie}
+          />)
+        }
+      </div>
     </div>
   );
 };

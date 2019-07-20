@@ -8,7 +8,7 @@ const PlayingAtCard = (props) => {
   return (
     <div>
       <h4>{playingAt.cinemaId === 0? 'Star Cineplex' : 'Blockbuster Cinemas'} ({mediaType})</h4>
-      <em>{playingAt.locationName}</em>
+      <h5>@{playingAt.locationName}</h5>
       <ShowTimeCard showTimes={playingAt.showTimes}/>
     </div>
   );
