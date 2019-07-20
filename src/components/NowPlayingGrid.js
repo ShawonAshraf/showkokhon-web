@@ -7,6 +7,7 @@ import MovieCard from './MovieCard';
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
+    flexDirection: 'row',
   }
 }));
 
@@ -17,9 +18,9 @@ const NowPLayingGrid = (props) => {
   return (
     <div className={classes.root}>
       {
-        nowPlaying.length === 0 ? <p>Loading!</p> : <Grid container spacing={1}>
+        nowPlaying.length === 0 ? <p>Loading!</p> : <Grid container spacing={2} align='stretch'>
           {
-            nowPlaying.map((res, index) => <Grid key={index} item xs={3}>
+            nowPlaying.map((res, index) => <Grid key={index} item xs>
               <MovieCard
                 key={index}
                 name={res._id.name}
