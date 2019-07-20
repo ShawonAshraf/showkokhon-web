@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-import MovieCard from './MovieCard';
+import NowPlayingGrid from './NowPlayingGrid';
 
 const NowPlaying = () => {
   // state hook
@@ -23,17 +23,7 @@ const NowPlaying = () => {
 
   return (
     <div>
-      {nowPlaying.length === 0 ? <p>Loading!</p> : <ul>
-        {
-          nowPlaying.map((res, index) => <li key={index}>
-            <MovieCard
-              key={index}
-              name={res._id.name}
-              imageUrl={res._id.imageUrl}
-            />
-          </li>)
-        }
-      </ul>}
+      <NowPlayingGrid nowPlaying={nowPlaying}/>
     </div>
   );
 };
