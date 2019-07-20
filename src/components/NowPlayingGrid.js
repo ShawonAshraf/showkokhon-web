@@ -18,7 +18,7 @@ const NowPLayingGrid = (props) => {
   return (
     <div className={classes.root}>
       {
-        nowPlaying.length === 0 ? <p>Loading!</p> : <Grid container spacing={2} align='stretch'>
+        nowPlaying.length === 0 ? <p>Loading!</p> : <Grid container spacing={2} justify={'center'} alignItems={'center'}>
           {
             nowPlaying.map((res, index) => <Grid key={index} item xs>
               <MovieCard
