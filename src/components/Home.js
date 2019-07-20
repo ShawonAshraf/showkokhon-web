@@ -14,7 +14,7 @@ const Home = () => {
 
   return (
     <div className={classes.root}>
-      <h2>Home</h2>
+      <h2>Now Playing</h2>
       <NowPlaying />
     </div>
   );
