@@ -25,7 +25,6 @@ const MovieCard = (props) => {
   if (!imageUrl) {
     imageUrl = DefaultImage;
   }
-  console.log(imageUrl);
 
   return (
     <Card className={classes.card}>
