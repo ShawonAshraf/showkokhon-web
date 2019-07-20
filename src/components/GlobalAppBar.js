@@ -28,13 +28,25 @@ const GlobalAppBar = () => {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
+          <IconButton
+            className={classes.menuButton}
+            color="inherit"
+            aria-label="Menu"
+            onClick={() => window.location.href= '/' }
+          >
             <MovieRoll />
           </IconButton>
-          <Typography variant="h5" className={classes.title}>
+          <Typography
+            variant="h5"
+            className={classes.title}
+          >
             Showkokhon
           </Typography>
-          <IconButton color="inherit" arial-lable="Home" onClick={() => window.location.href= '/' } >
+          <IconButton
+            color="inherit"
+            arial-lable="Home"
+            onClick={() => window.location.href= '/' }
+          >
             <HomeCircle />
           </IconButton>
         </Toolbar>
