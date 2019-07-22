@@ -1,8 +1,8 @@
 # Showkokhon Website
 > Why make an app when you can make a website? 🤔
 
-## Build Status
-[![Netlify Status](https://api.netlify.com/api/v1/badges/2c10d790-d239-49b0-96f5-bafbf2a8d05c/deploy-status)](https://app.netlify.com/sites/showkokhon/deploys)
+
+[![DeepScan grade](https://deepscan.io/api/teams/4763/projects/6518/branches/54716/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=4763&pid=6518&bid=54716) [![Netlify Status](https://api.netlify.com/api/v1/badges/2c10d790-d239-49b0-96f5-bafbf2a8d05c/deploy-status)](https://app.netlify.com/sites/showkokhon/deploys)
 
 ## Live @
 [https://showkokhon.netlify.com](https://showkokhon.netlify.com)
