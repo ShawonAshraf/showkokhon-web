@@ -22,6 +22,7 @@
  ```
  REACT_APP_API_ROOT_URL="http://localhost:3000"
  PORT=9090
+ SKIP_PREFLIGHT_CHECK=true
  ```
  _Change the values accordingly with the core-api_
 
