@@ -10,7 +10,9 @@ const Schedule = (props) => {
   // effect hook
   useEffect(() => {
     const fetchSchedule = async (name) => {
-      const url = `${process.env.REACT_APP_API_ROOT_URL}/core/v1/schedule/byname?name=${name}`;
+      // encode name as uri component
+      const encodedName = encodeURIComponent(name);
+      const url = `${process.env.REACT_APP_API_ROOT_URL}/core/v1/schedule/byname?name=${encodedName}`;
       const response = await axios.get(url);
 
       // set state
@@ -20,7 +22,7 @@ const Schedule = (props) => {
     fetchSchedule(props.movieName);
   }, [props.movieName]);
 
-  return(
+  return (
     <div>
       <h1 className={'movie-name-header'} align='center'>{props.movieName}</h1>
       <div className={'schedule-details'}>
