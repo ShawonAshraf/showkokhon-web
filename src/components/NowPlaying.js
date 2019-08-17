@@ -23,7 +23,8 @@ const NowPlaying = () => {
 
   return (
     <div>
-      <NowPlayingGrid nowPlaying={nowPlaying}/>
+      <h2>Now Playing</h2>
+      <NowPlayingGrid nowPlaying={nowPlaying} />
     </div>
   );
 };
