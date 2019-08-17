@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 import NowPlayingGrid from './NowPlayingGrid';
+import ResourceNotAvailable from './ResourceNotAvailable';
 
 const NowPlaying = () => {
   // state hook
   const [nowPlaying, setNowPlaying] = useState([]);
+  const [statusCode, setStatusCode] = useState([]);
 
   // effect hook
   useEffect(() => {
@@ -15,18 +17,32 @@ const NowPlaying = () => {
 
       // set state
       setNowPlaying(response.data.nowPlaying);
+      setStatusCode(response.status);
     };
 
     // call
     fetchNowPlaying();
   }, []);
 
-  return (
-    <div>
-      <h2>Now Playing</h2>
-      <NowPlayingGrid nowPlaying={nowPlaying} />
-    </div>
-  );
+  switch (statusCode) {
+    case 200:
+      return (
+        <div>
+          <h2>Now Playing</h2>
+          <NowPlayingGrid nowPlaying={nowPlaying} />
+        </div>
+      );
+    case 404:
+      return (
+        <div>
+          <ResourceNotAvailable />
+        </div>
+      );
+    default:
+      return (
+        <p>Loading</p>
+      );
+  }
 };
 
 export default NowPlaying;
