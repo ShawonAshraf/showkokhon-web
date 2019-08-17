@@ -35,7 +35,7 @@ const NowPlaying = () => {
     case 404:
       return (
         <div>
-          <ResourceNotAvailable />
+          <ResourceNotAvailable message={'Our databases have nothing to show at the moment sadly. :('} />
         </div>
       );
     default:

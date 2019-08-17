@@ -13,7 +13,7 @@ const ResourceNotAvailable = (props) => {
 
   return (
     <div className={classes.root}>
-      <h3>{props.message}</h3>
+      <h1>{props.message}</h1>
     </div>
   );
 };
