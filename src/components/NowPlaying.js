@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import NowPlayingGrid from './NowPlayingGrid';
 import ResourceNotAvailable from './ResourceNotAvailable';
+import ServiceNotAvailable from './ServiceNotAvailable';
 
 const NowPlaying = () => {
   // state hook
@@ -33,15 +34,13 @@ const NowPlaying = () => {
         </div>
       );
     case 404:
-      return (
-        <div>
-          <ResourceNotAvailable message={'Our databases have nothing to show at the moment sadly. :('} />
-        </div>
-      );
+      return <ResourceNotAvailable
+        message={'Our databases have nothing to show at the moment sadly. :('}
+      />;
+    case 500:
+      return <ServiceNotAvailable />;
     default:
-      return (
-        <p>Loading</p>
-      );
+      return <p>Loading</p>;
   }
 };
 
