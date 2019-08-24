@@ -13,12 +13,16 @@ const NowPlaying = () => {
   // effect hook
   useEffect(() => {
     const fetchNowPlaying = async () => {
-      const url = `${process.env.REACT_APP_API_ROOT_URL}/core/v1/schedule/nowplaying`;
-      const response = await axios.get(url);
+      try {
+        const url = `${process.env.REACT_APP_API_ROOT_URL}/core/v1/schedule/nowplaying`;
+        const response = await axios.get(url);
 
-      // set state
-      setNowPlaying(response.data.nowPlaying);
-      setStatusCode(response.status);
+        // set state
+        setNowPlaying(response.data.nowPlaying);
+        setStatusCode(response.status);
+      } catch (e) {
+        setStatusCode(e.reponse.status);
+      }
     };
 
     // call
