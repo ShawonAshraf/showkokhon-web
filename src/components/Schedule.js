@@ -13,14 +13,21 @@ const Schedule = (props) => {
   // effect hook
   useEffect(() => {
     const fetchSchedule = async (name) => {
-      // encode name as uri component
-      const encodedName = encodeURIComponent(name);
-      const url = `${process.env.REACT_APP_API_ROOT_URL}/core/v1/schedule/byname?name=${encodedName}`;
-      const response = await axios.get(url);
+      try {
+        // encode name as uri component
+        const encodedName = encodeURIComponent(name);
+        const url = `${process.env.REACT_APP_API_ROOT_URL}/core/v1/schedule/byname?name=${encodedName}`;
+        const response = await axios.get(url);
 
-      // set state
-      setState(response.data);
-      setStatusCode(response.status);
+        console.log(response.status);
+
+        // set state
+        setState(response.data);
+        setStatusCode(response.status);
+      } catch (e) {
+        const code = e.response.status;
+        setStatusCode(code);
+      }
     };
 
     fetchSchedule(props.movieName);
