@@ -48,7 +48,7 @@ const MovieCard = (props) => {
           size="small"
           color="primary"
           path={`schedule/${name}`}
-          onClick={() => window.location.href = `schedule/${name}`}
+          onClick={() => window.location.href = `schedule/${encodeURIComponent(name)}`}
         >
           Schedule
         </Button>
