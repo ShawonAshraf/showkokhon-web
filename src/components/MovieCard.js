@@ -1,5 +1,5 @@
 import React from 'react';
-import {makeStyles} from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
@@ -18,7 +18,7 @@ const useStyles = makeStyles({
 
 // a cardview containing the name and cover art image of a movie
 const MovieCard = (props) => {
-  let {name, imageUrl} = props;
+  let { name, imageUrl } = props;
   const classes = useStyles();
 
   // use the default image in case missing
@@ -35,7 +35,7 @@ const MovieCard = (props) => {
           height="140"
           image={imageUrl}
           title={name}
-          onClick={() => window.location.href= `schedule/${name}` }
+          onClick={() => window.location.href = `schedule/${encodeURIComponent(name)}`}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
@@ -48,7 +48,7 @@ const MovieCard = (props) => {
           size="small"
           color="primary"
           path={`schedule/${name}`}
-          onClick={() => window.location.href= `schedule/${name}` }
+          onClick={() => window.location.href = `schedule/${name}`}
         >
           Schedule
         </Button>
