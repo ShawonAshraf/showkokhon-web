@@ -14,9 +14,7 @@ const Schedule = (props) => {
   useEffect(() => {
     const fetchSchedule = async (name) => {
       try {
-        // encode name as uri component
-        const encodedName = encodeURIComponent(name);
-        const url = `${process.env.REACT_APP_API_ROOT_URL}/core/v1/schedule/byname?name=${encodedName}`;
+        const url = `${process.env.REACT_APP_API_ROOT_URL}/core/v1/schedule/byname?name=${name}`;
         const response = await axios.get(url);
 
         console.log(response.status);
