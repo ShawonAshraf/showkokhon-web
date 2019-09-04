@@ -17,8 +17,6 @@ const Schedule = (props) => {
         const url = `${process.env.REACT_APP_API_ROOT_URL}/core/v1/schedule/byname?name=${encodeURIComponent(name)}`;
         const response = await axios.get(url);
 
-        console.log(response.status);
-
         // set state
         setState(response.data);
         setStatusCode(response.status);

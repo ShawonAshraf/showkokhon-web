@@ -35,7 +35,7 @@ const MovieCard = (props) => {
           height="140"
           image={imageUrl}
           title={name}
-          onClick={() => window.location.href = `schedule/${encodeURIComponent(name)}`}
+          onClick={() => window.location.href = `schedule/${name}`}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
@@ -48,7 +48,7 @@ const MovieCard = (props) => {
           size="small"
           color="primary"
           path={`schedule/${name}`}
-          onClick={() => window.location.href = `schedule/${encodeURIComponent(name)}`}
+          onClick={() => window.location.href = `schedule/${name}`}
         >
           Schedule
         </Button>
