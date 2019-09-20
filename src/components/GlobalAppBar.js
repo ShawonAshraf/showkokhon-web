@@ -9,9 +9,9 @@ import HomeCircle from 'mdi-material-ui/HomeCircle';
 import GithubCircle from 'mdi-material-ui/GithubCircle';
 import About from 'mdi-material-ui/Information';
 
-import { navigate } from '@reach/router';
-
 import AppBarElevation from './AppBarElevation';
+
+import { navigateTo } from '../util/navigator';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -27,10 +27,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-// helper methods
-const navigateTo = (path) => {
-  navigate(path);
-};
+
 
 const GlobalAppBar = (props) => {
   const classes = useStyles();
