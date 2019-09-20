@@ -7,6 +7,9 @@ import IconButton from '@material-ui/core/IconButton';
 import MovieRoll from 'mdi-material-ui/MovieRoll';
 import HomeCircle from 'mdi-material-ui/HomeCircle';
 import GithubCircle from 'mdi-material-ui/GithubCircle';
+import About from 'mdi-material-ui/Information';
+
+import AppBarElevation from './AppBarElevation';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -22,47 +25,59 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const GlobalAppBar = () => {
+const GlobalAppBar = (props) => {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="Menu"
-            onClick={() => window.location.href = '/'}
-          >
-            <MovieRoll />
-          </IconButton>
-          <Typography
-            variant="h5"
-            className={classes.title}
-          >
-            Showkokhon
+      <AppBarElevation {...props} >
+        <AppBar>
+          <Toolbar>
+            <IconButton
+              className={classes.menuButton}
+              color="inherit"
+              aria-label="Home"
+              onClick={() => window.location.href = '/'}
+            >
+              <MovieRoll />
+            </IconButton>
+            <Typography
+              variant="h5"
+              className={classes.title}
+            >
+              Showkokhon
           </Typography>
 
-          {/* Github button */}
-          <IconButton
-            color="inherit"
-            arial-lable="Github"
-            onClick={() => window.location.href = 'https://github.com/ShawonAshraf/showkokhon-web'}
-          >
-            <GithubCircle />
-          </IconButton>
+            {/* Github button */}
+            <IconButton
+              color="inherit"
+              arial-lable="Github"
+              onClick={() => window.location.href = 'https://github.com/ShawonAshraf/showkokhon-web'}
+            >
+              <GithubCircle />
+            </IconButton>
 
-          {/* home button */}
-          <IconButton
-            color="inherit"
-            arial-lable="Home"
-            onClick={() => window.location.href = '/'}
-          >
-            <HomeCircle />
-          </IconButton>
-        </Toolbar>
-      </AppBar>
+            {/* home button */}
+            <IconButton
+              color="inherit"
+              arial-lable="Home"
+              onClick={() => window.location.href = '/'}
+            >
+              <HomeCircle />
+            </IconButton>
+
+            {/* about button */}
+            <IconButton
+              color="inherit"
+              arial-lable="About"
+              onClick={() => window.location.href = '/about'}
+            >
+              <About />
+            </IconButton>
+          </Toolbar>
+        </AppBar>
+      </AppBarElevation>
+      <Toolbar />
     </div>
   );
 };

@@ -11,8 +11,8 @@ const App = () => {
     <div>
       <GlobalAppBar />
       <AppRouter>
-        <Home path={ '/' } />
-        <Schedule path={ 'schedule/:movieName' } />
+        <Home path={'/'} />
+        <Schedule path={'schedule/:movieName'} />
       </AppRouter>
     </div>
   );
