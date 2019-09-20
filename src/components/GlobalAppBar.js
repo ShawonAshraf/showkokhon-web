@@ -9,6 +9,8 @@ import HomeCircle from 'mdi-material-ui/HomeCircle';
 import GithubCircle from 'mdi-material-ui/GithubCircle';
 import About from 'mdi-material-ui/Information';
 
+import { navigate } from '@reach/router';
+
 import AppBarElevation from './AppBarElevation';
 
 const useStyles = makeStyles(theme => ({
@@ -25,6 +27,11 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
+// helper methods
+const navigateTo = (path) => {
+  navigate(path);
+};
+
 const GlobalAppBar = (props) => {
   const classes = useStyles();
 
@@ -37,7 +44,7 @@ const GlobalAppBar = (props) => {
               className={classes.menuButton}
               color="inherit"
               aria-label="Home"
-              onClick={() => window.location.href = '/'}
+              onClick={() => navigateTo('/')}
             >
               <MovieRoll />
             </IconButton>
@@ -52,7 +59,7 @@ const GlobalAppBar = (props) => {
             <IconButton
               color="inherit"
               arial-lable="Github"
-              onClick={() => window.location.href = 'https://github.com/ShawonAshraf/showkokhon-web'}
+              onClick={() => navigateTo('https://github.com/ShawonAshraf/showkokhon-web')}
             >
               <GithubCircle />
             </IconButton>
@@ -61,7 +68,7 @@ const GlobalAppBar = (props) => {
             <IconButton
               color="inherit"
               arial-lable="Home"
-              onClick={() => window.location.href = '/'}
+              onClick={() => navigateTo('/')}
             >
               <HomeCircle />
             </IconButton>
@@ -70,7 +77,7 @@ const GlobalAppBar = (props) => {
             <IconButton
               color="inherit"
               arial-lable="About"
-              onClick={() => window.location.href = '/info'}
+              onClick={() => navigateTo('/info')}
             >
               <About />
             </IconButton>
