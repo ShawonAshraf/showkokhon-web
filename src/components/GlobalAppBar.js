@@ -3,10 +3,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-// import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MovieRoll from 'mdi-material-ui/MovieRoll';
 import HomeCircle from 'mdi-material-ui/HomeCircle';
+import GithubCircle from 'mdi-material-ui/GithubCircle';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -33,7 +33,7 @@ const GlobalAppBar = () => {
             className={classes.menuButton}
             color="inherit"
             aria-label="Menu"
-            onClick={() => window.location.href= '/' }
+            onClick={() => window.location.href = '/'}
           >
             <MovieRoll />
           </IconButton>
@@ -43,10 +43,21 @@ const GlobalAppBar = () => {
           >
             Showkokhon
           </Typography>
+
+          {/* Github button */}
+          <IconButton
+            color="inherit"
+            arial-lable="Github"
+            onClick={() => window.location.href = 'https://github.com/ShawonAshraf/showkokhon-web'}
+          >
+            <GithubCircle />
+          </IconButton>
+
+          {/* home button */}
           <IconButton
             color="inherit"
             arial-lable="Home"
-            onClick={() => window.location.href= '/' }
+            onClick={() => window.location.href = '/'}
           >
             <HomeCircle />
           </IconButton>
