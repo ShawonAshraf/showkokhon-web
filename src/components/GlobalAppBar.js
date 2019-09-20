@@ -70,7 +70,7 @@ const GlobalAppBar = (props) => {
             <IconButton
               color="inherit"
               arial-lable="About"
-              onClick={() => window.location.href = '/about'}
+              onClick={() => window.location.href = '/info'}
             >
               <About />
             </IconButton>
