@@ -8,6 +8,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
+import { navigateTo } from '../util/navigator';
 import DefaultImage from '../images/default.jpg';
 
 const useStyles = makeStyles({
@@ -35,7 +36,7 @@ const MovieCard = (props) => {
           height="140"
           image={imageUrl}
           title={name}
-          onClick={() => window.location.href = `schedule/${name}`}
+          onClick={() => navigateTo(`schedule/${name}`)}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
@@ -48,9 +49,9 @@ const MovieCard = (props) => {
           size="small"
           color="primary"
           path={`schedule/${name}`}
-          onClick={() => window.location.href = `schedule/${name}`}
+          onClick={() => navigateTo(`schedule/${name}`)}
         >
-          Schedule
+          Showtime
         </Button>
       </CardActions>
     </Card>
