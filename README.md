@@ -7,6 +7,10 @@
 ## Live @
 [https://showkokhon.netlify.com](https://showkokhon.netlify.com)
 
+## PWA
+![pwa][./pwa.png]
+If you're running Chrome 77 or newer browsers you install ShowKokhon as a PWA. Chrome will show a install button when you load the page.
+
 ## Repo
 - [GitLab](https://gitlab.com/ShawonAshraf/showkokhon-web)
 - [GitHub](https://github.com/ShawonAshraf/showkokhon-web)
