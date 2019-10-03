@@ -11,7 +11,7 @@
 
 ![pwa](./pwa.png)
 
-If you're running Chrome 77 or newer browsers you install ShowKokhon as a PWA. Chrome will show a install button when you load the page.
+If you're running Chrome 77 or newer browsers you can install ShowKokhon as a PWA. Chrome will show a install button when you load the page.
 
 ## Repo
 - [GitLab](https://gitlab.com/ShawonAshraf/showkokhon-web)
