@@ -8,8 +8,8 @@
     "@reach/router": "^1.2.1",
     "axios": "^0.19.0",
     "mdi-material-ui": "^6.8.0",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
     "react-scripts": "3.0.1"
   },
   "scripts": {
