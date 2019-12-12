@@ -3,6 +3,7 @@
 
 
 [![CodeFactor](https://www.codefactor.io/repository/github/shawonashraf/showkokhon-web/badge)](https://www.codefactor.io/repository/github/shawonashraf/showkokhon-web) [![DeepScan grade](https://deepscan.io/api/teams/4763/projects/6518/branches/54716/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=4763&pid=6518&bid=54716) [![Netlify Status](https://api.netlify.com/api/v1/badges/2c10d790-d239-49b0-96f5-bafbf2a8d05c/deploy-status)](https://app.netlify.com/sites/showkokhon/deploys)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FShawonAshraf%2Fshowkokhon-web.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FShawonAshraf%2Fshowkokhon-web?ref=badge_shield)
 
 ## Live @
 [https://showkokhon.netlify.com](https://showkokhon.netlify.com)
@@ -40,3 +41,6 @@ If you're running Chrome 77 or newer browsers you can install ShowKokhon as a PW
 
 ## LICENSE
 MIT
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FShawonAshraf%2Fshowkokhon-web.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FShawonAshraf%2Fshowkokhon-web?ref=badge_large)
