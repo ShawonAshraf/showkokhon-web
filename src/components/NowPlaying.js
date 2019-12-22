@@ -21,7 +21,7 @@ const NowPlaying = () => {
         setNowPlaying(response.data.nowPlaying);
         setStatusCode(response.status);
       } catch (e) {
-        setStatusCode(e.reponse.status);
+        setStatusCode(e.reponse ? e.response.status : 500);
       }
     };
 
