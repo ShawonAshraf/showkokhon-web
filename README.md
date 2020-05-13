@@ -2,7 +2,7 @@
 > Why make an app when you can make a website? 🤔
 
 
-[![CodeFactor](https://www.codefactor.io/repository/github/shawonashraf/showkokhon-web/badge)](https://www.codefactor.io/repository/github/shawonashraf/showkokhon-web) [![DeepScan grade](https://deepscan.io/api/teams/4763/projects/6518/branches/54716/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=4763&pid=6518&bid=54716)
+[![CodeFactor](https://www.codefactor.io/repository/github/shawonashraf/showkokhon-web/badge)](https://www.codefactor.io/repository/github/shawonashraf/showkokhon-web) [![DeepScan grade](https://deepscan.io/api/teams/4763/projects/6518/branches/54716/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=4763&pid=6518&bid=54716) [![Build Status](https://dev.azure.com/shawonAshraf/showkookhon-web/_apis/build/status/ShawonAshraf.showkokhon-web?branchName=master)](https://dev.azure.com/shawonAshraf/showkookhon-web/_build/latest?definitionId=6&branchName=master)
 
 
 ## PWA
