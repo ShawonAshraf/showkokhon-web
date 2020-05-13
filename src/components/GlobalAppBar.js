@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MovieRoll from 'mdi-material-ui/MovieRoll';
 import HomeCircle from 'mdi-material-ui/HomeCircle';
-import GithubCircle from 'mdi-material-ui/GithubCircle';
+import { mdiGithub } from '@mdi/js';
 import About from 'mdi-material-ui/Information';
 
 import axios from 'axios';
@@ -89,7 +89,7 @@ const GlobalAppBar = (props) => {
               arial-lable="Github"
               onClick={() => navigateTo('https://github.com/ShawonAshraf/showkokhon-web')}
             >
-              <GithubCircle />
+              <mdiGithub />
             </IconButton>
 
             {/* home button */}
