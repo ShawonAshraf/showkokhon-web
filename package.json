@@ -5,7 +5,7 @@
   "dependencies": {
     "@material-ui/core": "^4.10.0",
     "@material-ui/icons": "^4.5.1",
-    "@mdi/js": "^5.2.45",
+    "@mdi/js": "^5.3.45",
     "@reach/router": "^1.2.1",
     "axios": "^0.19.0",
     "mdi-material-ui": "^6.15.0",
